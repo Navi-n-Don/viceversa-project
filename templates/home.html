@@ -1,5 +1,40 @@
-<h1>Vice Versa</h1>
-<form action="">
-    <textarea name="reverse" id="reverse" cols="30" rows="10"></textarea>
-    <input type="submit" name="submit">
-</form>
+{% load static %}
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Home</title>
+    <link rel="stylesheet" href="{% static 'css/base.css'%}" type="text/css">
+    <link href="{% static 'css/textillate/animate.css'%}" rel="stylesheet">
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/1.9.0/jquery.min.js"></script>
+    <script src="{% static 'js/textillate/jquery.lettering.js'%}"></script>
+    <script src="{% static 'js/textillate/jquery.textillate.js'%}"></script>
+</head>
+<body>
+    <h1 class="textillate-vv">Vice Versa</h1>
+    <form action="" class="form-vv">
+        <textarea name="reverse" id="reverse" cols="50" rows="10"></textarea>
+        <br><br>
+        <input type="submit" name="submit" value="Reverse">
+    </form>
+    <script>
+        $(function () {
+            $('.textillate-vv').textillate({
+                loop: true,
+                minDisplayTime: 10000,
+                initialDelay: 0,
+                in: {
+                    effect: 'flipInY',
+                    delayScale: 2.0,
+                    reverse: false
+                },
+                out: {
+                    effect: 'flipOutY',
+                    delayScale: 2.0,
+                    reverse: true
+                }
+            });
+        })
+    </script>
+</body>
+</html>

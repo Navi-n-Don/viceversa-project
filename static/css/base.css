@@ -1,0 +1,41 @@
+body {
+    margin: 0;
+    padding: 20px;
+    background-color: #e1e2e3;
+    font-family: sans-serif;
+}
+.textillate-vv {color: darkgreen}
+.form-vv {
+    width: 450px;
+}
+#reverse {
+    width: calc(100% - 22px);
+    resize: none;
+    border-radius: 5px;
+    border: 1px solid #ccc;
+    padding: 10px;
+}
+#reverse:focus {
+    outline: 1px solid green;
+    box-shadow: 0 0 15px lightgreen;
+}
+input[type=submit] {
+    width: 100%;
+    padding: 10px;
+    border-radius: 10px;
+    border-style: outset;
+    border-color: darkgreen;
+    background-color: green;
+    opacity: 0.8;
+    cursor: pointer;
+    color: white;
+    text-transform: uppercase;
+    font-weight: bold;
+    font-size: 12pt;
+    font-family: inherit;
+    letter-spacing: 1px;
+}
+input[type=submit]:hover {
+    opacity: 1.0;
+}
+textarea {font-family: inherit}
